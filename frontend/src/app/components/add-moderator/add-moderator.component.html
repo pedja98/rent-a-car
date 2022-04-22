@@ -1,0 +1,30 @@
+<div>
+    <div class="add-mod-title">
+        <h2 mat-dialog-title>ADD MODERATOR</h2>
+        <button mat-dialog-close class="add-mod-close-btn">X</button>
+    </div>
+    <div class="add-mod-content">
+        <form>
+
+            <div class="form-group-pair">
+                <input autocomplete="off" class="add-mod-item-box" type="text" name="name" placeholder="*name:" id="name" [(ngModel)]="name">
+                <input autocomplete="off" class="add-mod-item-box" type="text" name="surname" placeholder="*surname:" id="surname" [(ngModel)]="surname">
+            </div>
+
+
+            <input autocomplete="off" class="add-mod-item-box-2" type="text" name="username" placeholder="*username:" id="username" [(ngModel)]="username">
+            <input autocomplete="off" class="add-mod-item-box-2" type="password" name="password" placeholder="*password:" id="password" [(ngModel)]="password">
+            <input autocomplete="off" class="add-mod-item-box-2" type="password" name="confirm" placeholder="*confirm password:" id="confirm" [(ngModel)]="confirm">
+            <input autocomplete="off" class="add-mod-item-box-2" type="text" name="email" placeholder="*email:" id="email" [(ngModel)]="email">
+            <input autocomplete="off" class="add-mod-item-box-2" type="text" name="address" placeholder="*address:" id="address" [(ngModel)]="address">
+            <mat-dialog-actions>
+                <button class="add-mod-btn" (click)="addModerator()">ADD MODERATOR</button>
+            </mat-dialog-actions>
+        </form>
+
+        <div [ngClass]="{'acc-msg': acc, 'err-msg': !acc}" *ngIf="msg != ''">
+            <p>{{msg}}</p>
+        </div>
+
+    </div>
+</div>

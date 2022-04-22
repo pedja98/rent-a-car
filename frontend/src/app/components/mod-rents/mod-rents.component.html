@@ -1,0 +1,12 @@
+<div class="content">
+    <div class="btn-conteiner">
+        <button class="btn" (click)="change('rents')">all rents</button>
+        <button class="btn" (click)="change('car')">by car</button>
+        <button class="btn" (click)="change('date')">by date</button>
+    </div>
+    <div class="content">
+        <app-all-rents *ngIf="visible == 'rents'"></app-all-rents>
+        <app-by-car *ngIf="visible == 'car'"></app-by-car>
+        <app-by-date *ngIf="visible == 'date'"></app-by-date>
+    </div>
+</div>

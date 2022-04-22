@@ -1,0 +1,45 @@
+table {
+    width: 65%;
+}
+
+.rents-table {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cancle-btn {
+    background-color: #379cfa;
+    color: white;
+    width: 85px;
+    height: 35px;
+    font-size: 19px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cancle-btn:hover {
+    background-color: #2b8be4;
+    color: rgb(190, 187, 187);
+}
+
+.dis-cancle-btn {
+    background-color: #2b8be4;
+    color: rgb(190, 187, 187);
+    width: 85px;
+    height: 35px;
+    font-size: 19px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.dis-cancle-btn:hover {
+    background-color: #2b8be4;
+    color: rgb(190, 187, 187);
+}

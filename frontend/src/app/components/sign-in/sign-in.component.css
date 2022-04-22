@@ -1,0 +1,67 @@
+.sign-in-item-box {
+    background-color: white;
+    color: black;
+    width: 100%;
+    height: 35px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    padding-left: 7px;
+}
+
+.sign-in-btn {
+    background-color: #379cfa;
+    color: white;
+    width: 100%;
+    height: 35px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.sign-in-item-box:focus {
+    outline-width: 0;
+}
+
+.sign-in-btn:hover {
+    background-color: #2b8be4;
+    color: rgb(190, 187, 187);
+}
+
+.sign-in-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sign-in-close-btn {
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    color: #939ea8;
+    height: 5px;
+    margin-top: -17px;
+    margin-right: -12px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.err-msg {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 8px;
+    padding-left: 6px;
+    background-color: #fd6c6c;
+    color: #f51414;
+    border-left: 8px solid;
+    border-radius: 4px;
+}

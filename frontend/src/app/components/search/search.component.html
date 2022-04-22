@@ -1,0 +1,68 @@
+<div class="search">
+    <div class="search-form">
+        <form>
+            <ul>
+                <li>
+                    <h2 class="mat-title search-form-title"><b>SEARCH :</b></h2>
+                </li>
+                <li><input autocomplete="off" class="serch-item-box" type="text" name="brand" id="brand" placeholder="brand" [(ngModel)]="brand"></li>
+                <li><input autocomplete="off" class="serch-item-box" type="text" name="model" id="model" placeholder="model" [(ngModel)]="model"></li>
+                <li><input autocomplete="off" class="serch-item-box" type="text" name="color" id="color" placeholder="color" [(ngModel)]="color"></li>
+                <li><input autocomplete="off" class="serch-item-box" type="text" name="price-to" id="price-to" placeholder="price to" [(ngModel)]="priceTo"></li>
+                <li> <button class="search-btn" (click)="search()">search</button></li>
+            </ul>
+        </form>
+    </div>
+
+    <div class="arrow-btn-cnt">
+
+        <button [disabled]="start<=0" (click)="moveLeft()">
+            <mat-icon>arrow_back_ios</mat-icon>
+        </button>
+
+        <button [disabled]="end>=cars.length" (click)="moveRight()">
+            <mat-icon>arrow_forward_ios</mat-icon>
+        </button>
+
+    </div>
+
+    <div [ngClass]="{'container' : showSpinner}">
+        <div class="spinner" *ngIf="showSpinner">
+            <mat-spinner color="primary"></mat-spinner>
+        </div>
+
+        <div class="content" *ngIf="!showSpinner">
+            <div class="search-content">
+                <div class="element-group">
+                    <div (click)="carNavigate(start + i)" class="element" *ngFor="let car of cars.slice(start, middle); let i = index">
+                        <div class="element-img">
+                            <img alt="car picture" [src]="pics[start + i]">
+                        </div>
+
+                        <div class="element-content">
+                            <p>{{car.brand}} {{car.model}}</p>
+                            <p>{{car.price}} $</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search-content">
+                <div class="element-group">
+                    <div (click)="carNavigate(middle + i)" class="element" *ngFor="let car of cars.slice(middle, end); let i = index">
+                        <div class="element-img">
+                            <img alt="car picture" [src]="pics[middle + i]">
+                        </div>
+
+                        <div class="element-content">
+                            <p>{{car.brand}} {{car.model}}</p>
+                            <p>{{car.price}} $</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

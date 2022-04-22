@@ -1,0 +1,34 @@
+.content {
+    margin-top: 20px;
+}
+
+.btn-conteiner {
+    display: flex;
+    margin-left: 10px;
+}
+
+.btn {
+    background-color: #379cfa;
+    color: white;
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:not(:first-child) {
+    margin-left: 10px;
+}
+
+.btn:hover  { 
+    background-color: #2b8be4;
+    color: rgb(190, 187, 187);
+}
+
+.content {
+    margin-top: 10px;
+    margin-left: 10px;
+}

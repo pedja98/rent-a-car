@@ -1,0 +1,27 @@
+<div>
+    <div class="modify-title">
+        <h2 mat-dialog-title>MODIFY</h2>
+        <button mat-dialog-close class="modify-close-btn">X</button>
+    </div>
+    <div class="modify-content">
+        <form>
+            <div class="form-group-pair">
+                <input autocomplete="off" [(ngModel)]="name" class="modify-item-box" type="text" name="name" placeholder="*name:" id="name" />
+                <input autocomplete="off" [(ngModel)]="surname" class="modify-item-box" type="text" name="surname" placeholder="*surname:" id="surname" />
+            </div>
+
+            <input autocomplete="off" [(ngModel)]="username" class="modify-item-box-2" type="text" name="username" placeholder="*username:" id="username" />
+            <input autocomplete="off" [(ngModel)]="password" class="modify-item-box-2" type="password" name="password" placeholder="*password:" id="password" />
+            <input autocomplete="off" [(ngModel)]="confirm" class="modify-item-box-2" type="password" name="confirm" placeholder="*confirm:" id="confirm" />
+            <input autocomplete="off" [(ngModel)]="email" class="modify-item-box-2" type="text" name="email" placeholder="*email:" id="email" />
+            <input autocomplete="off" [(ngModel)]="address" class="modify-item-box-2" type="text" name="address" placeholder="*address:" id="address" />
+            <mat-dialog-actions>
+                <button class="modify-btn" (click)="save()">SAVE</button>
+            </mat-dialog-actions>
+        </form>
+
+        <div class="err-msg" *ngIf="msg != ''">
+            <p>{{msg}}</p>
+        </div>
+    </div>
+</div>

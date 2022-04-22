@@ -1,0 +1,7 @@
+table {
+    width: 60%;
+}
+
+.rents-table {
+    display: flex;
+}

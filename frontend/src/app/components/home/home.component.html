@@ -1,0 +1,17 @@
+<div class="main">
+    <header>
+        <h1 class="title" routerLink="">RENT A CAR</h1>
+        <div class="btn-container">
+            <button class="sign-in-btn" (click)="openSignIn()">sign in</button>
+            <button class="sign-up-btn" (click)="openSignUp()">sign up</button>
+        </div>
+    </header>
+
+    <section class='content'>
+        <router-outlet></router-outlet>
+    </section>
+
+    <footer>
+        <h4 class="mat-caption">&copy; Predrag Mirkovic</h4>
+    </footer>
+</div>

@@ -1,0 +1,25 @@
+<div class="car-container">
+    <div class='car-img'>
+        <h1>{{car.brand}} {{car.model}}</h1>
+        <div class="car-img-conteiner">
+            <img [src]="pic" alt="car image">
+            <h2 class="car-price">${{car.price}}/day</h2>
+        </div>
+    </div>
+    <div class='car-rent-form'>
+        <form>
+            <h1>RENT</h1>
+            <div class='car-date-input'>
+                <label class='mat-title'>rent date:</label> <input name='rent-date' [(ngModel)]="rentDate" type="date" class='date-box' type='date'>
+            </div>
+            <div class='car-date-input'>
+                <label class='mat-title'>return date:</label> <input name='return-date' [(ngModel)]="returnDate" class='date-box' type='date'>
+            </div>
+            <button (click)='rentCar()' class='rent-btn'>RENT</button>
+        </form>
+
+        <div class='err-msg' *ngIf="msg != ''">
+            <p>{{msg}}</p>
+        </div>
+    </div>
+</div>

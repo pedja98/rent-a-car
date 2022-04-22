@@ -1,0 +1,19 @@
+<div class="sign-in-form">
+    <div class="sign-in-title">
+        <h2 mat-dialog-title>SIGN IN</h2>
+        <button mat-dialog-close class="sign-in-close-btn">X</button>
+    </div>
+    <div class="sign-in-content">
+        <form>
+            <input autocomplete="off" class="sign-in-item-box" type="text" name="username" placeholder="username:" id="username" [(ngModel)]="username">
+            <input autocomplete="off" class="sign-in-item-box" type="password" name="password" placeholder="password:" id="password" [(ngModel)]="password">
+            <mat-dialog-actions>
+                <button class="sign-in-btn" (click)="signIn()">SIGN IN</button>
+            </mat-dialog-actions>
+        </form>
+
+        <div class="err-msg" *ngIf="msg != '' ">
+            <p>{{msg}}</p>
+        </div>
+    </div>
+</div>
